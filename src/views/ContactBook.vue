@@ -10,7 +10,7 @@
             </h4>
             <ContactList
                 v-if="filteredContactsCount > 0"
-                :contacts="filleredContacts"
+                :contacts="filteredContacts"
                 v-model:activeIndex="activeIndex"
             />
             <p v-else>
@@ -98,9 +98,9 @@ export default {
             if (this.activeIndex < 0) return null;
                 return this.filteredContacts[this.activeIndex];
             },
-            filteredContactsCount() {
-                return this.filteredContacts.length;
-            },
+        filteredContactsCount() {
+            return this.filteredContacts.length;
+        },
     },
     methods: {
         async retrieveContacts() {

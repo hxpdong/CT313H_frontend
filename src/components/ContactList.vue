@@ -5,7 +5,7 @@ export default {
         activeIndex: {type: Number, default: -1},
     },
     emits: ['update:activeIndex'],
-    method: {
+    methods: {
         updateActiveIndex(index){
             this.$emit('update:activeIndex', index);
         },
